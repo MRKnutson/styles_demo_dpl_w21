@@ -1,0 +1,5 @@
+export const PRIMARY_COLOR= "lightblue"
+export const SECONDARY_COLOR= "red"
+export const TABLET_SIZE="780px"
+export const DESKTOP="1200px"
+export const MOBILE="500px"

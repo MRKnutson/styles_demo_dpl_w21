@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { Header, Segment } from 'semantic-ui-react';
+import styled from 'styled-components';
+import HeaderText from './components/HeaderText';
+import hi, { AppContainer, Transparent, Header as MyHeader, yo } from './components/ExportImportDemo';
+import Projects from './components/Projects';
+import Demo from './components/Demo';
 
 function App() {
+  hi();
+  yo();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <HeaderText fsize ="large">My Portfolio</HeaderText>
+      <Segment as={Transparent}>
+        <HeaderText fsize="medium">My Projects</HeaderText>
+        <Projects />
+      </Segment>
+      <Segment  as={Transparent}>
+        <HeaderText fsize="small">Contact</HeaderText>
+      </Segment>
+      <Demo />
+    </AppContainer>
   );
 }
+
+
+
+
 
 export default App;
